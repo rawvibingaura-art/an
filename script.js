@@ -180,3 +180,17 @@ document.querySelectorAll(".get-touch-btn").forEach(btn => {
     window.open(`https://wa.me/919563316500?text=${message}`, "_blank");
   });
 });
+// ================= HAMBURGER MENU =================
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Close menu when clicking link (mobile UX)
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
+});

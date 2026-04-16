@@ -32,7 +32,15 @@
 						<li><button class="btn get-touch-btn">Get in touch</button></li>
 					</ul>
 				</nav>
-
+				 <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 w-full bg-zinc-950/95 backdrop-blur-2xl h-screen hidden flex-col items-center justify-center space-y-6 z-[150] px-6">
+        <button onclick="toggleMobileMenu()" class="absolute top-8 right-8 text-white p-4"><i data-lucide="x" size="32"></i></button>
+        <a href="index.html" onclick="toggleMobileMenu()" class="text-3xl font-light tracking-widest text-zinc-100 uppercase py-6 w-full text-center border-b border-white/5">Home</a>
+        <a href="about.html" onclick="toggleMobileMenu()" class="text-3xl font-light tracking-widest text-zinc-100 uppercase py-6 w-full text-center border-b border-white/5">About</a>
+        <a href="project.html" onclick="toggleMobileMenu()" class="text-3xl font-light tracking-widest text-zinc-100 uppercase py-6 w-full text-center border-b border-white/5">Projects</a>
+        <a href="contact.html" onclick="toggleMobileMenu()" class="text-3xl font-light tracking-widest text-zinc-100 uppercase py-6 w-full text-center border-b border-white/5">Contact</a>
+        <a href="skills.html" onclick="toggleMobileMenu()" class="text-3xl font-light tracking-widest text-zinc-100 uppercase py-6 w-full text-center">Skills</a>
+    </div>
 				<div class="hero-content">
 					<div class="left reveal delay-1">
 					   <p>

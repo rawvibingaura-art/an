@@ -180,3 +180,10 @@ document.querySelectorAll(".get-touch-btn").forEach(btn => {
     window.open(`https://wa.me/919563316500?text=${message}`, "_blank");
   });
 });
+// Toggle mobile menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            document.body.classList.toggle('no-scroll');
+        }

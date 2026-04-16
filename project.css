@@ -1,0 +1,384 @@
+/* ── FILTER CONTAINER ─────────────────────────────────────── */
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    margin: 30px 0 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* ── FILTER BUTTONS ───────────────────────────────────────── */
+.project-filter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: #ccc;
+    cursor: pointer;
+    font-weight: 600;
+    z-index: 1;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff6a00, #ee0979, #8e2de2);
+    z-index: -1;
+    transition: width 0.4s ease;
+}
+
+.filter-btn:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 100, 50, 0.4);
+}
+
+.filter-btn:hover::before {
+    width: 100%;
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #ff6a00, #ee0979, #8e2de2);
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 20px rgba(255, 100, 50, 0.5);
+}
+
+/* ── EXPLORE BUTTON ───────────────────────────────────────── */
+.explore-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
+}
+
+.explore-btn:hover {
+    background: linear-gradient(135deg, #ff6a00, #ee0979, #8e2de2);
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+/* ── PROJECTS GRID ────────────────────────────────────────── */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0 40px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ── PROJECT CARD ─────────────────────────────────────────── */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+    height: 220px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    border: 1px solid rgba(142, 45, 226, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 0 0px rgba(142, 45, 226, 0);
+}
+
+.project-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.project-card video,
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85) saturate(0.9);
+    transition: transform 0.4s ease, filter 0.4s ease;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.project-card video:not([src]),
+.project-card video[src=""] {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+}
+
+/* ── PROJECT OVERLAY ──────────────────────────────────────── */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.85) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 18px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-overlay h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.project-overlay p {
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* ── CARD HOVER ───────────────────────────────────────────── */
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:
+        0 0 25px rgba(142, 45, 226, 0.6),
+        0 0 60px rgba(255, 106, 0, 0.2),
+        0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.project-card:hover video,
+.project-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(1) saturate(1.2);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+/* ── BEFORE / AFTER ───────────────────────────────────────── */
+.before-after {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.before-after h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #ff6a00, #ee0979, #8e2de2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.before-after-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ba-card {
+    flex: 1;
+    min-width: 280px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 18px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 0px rgba(142, 45, 226, 0);
+}
+
+.ba-card h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.ba-card video {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.ba-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 0 25px rgba(142, 45, 226, 0.4),
+        0 0 50px rgba(255, 106, 0, 0.15);
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .filter-container {
+        padding: 0 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .projects-grid {
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .before-after {
+        padding: 40px 20px;
+    }
+
+    .before-after h2 {
+        font-size: 24px;
+    }
+}
+/* ─────────────────────────────────────────────
+   PROJECT SECTION – FINAL RESPONSIVE LAYER
+──────────────────────────────────────────── */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        padding: 0 25px 30px;
+        gap: 20px;
+    }
+
+    .filter-container {
+        padding: 0 25px;
+    }
+
+    .project-card {
+        height: 200px;
+    }
+
+    .project-card video,
+    .project-card img {
+        height: 200px;
+    }
+}
+
+/* Small Tablets */
+@media (max-width: 900px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .project-filter {
+        justify-content: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .before-after-container {
+        gap: 20px;
+    }
+
+    .ba-card {
+        min-width: 240px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .filter-container {
+        padding: 0 15px;
+    }
+
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .explore-btn {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 16px;
+    }
+
+    .project-card {
+        height: 180px;
+    }
+
+    .project-card video,
+    .project-card img {
+        height: 180px;
+    }
+
+    .project-overlay h3 {
+        font-size: 16px;
+    }
+
+    .project-overlay p {
+        font-size: 12px;
+    }
+
+    .before-after {
+        padding: 30px 15px;
+    }
+
+    .before-after h2 {
+        font-size: 22px;
+    }
+
+    .ba-card {
+        min-width: 100%;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 400px) {
+    .filter-btn {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+    .project-card {
+        height: 160px;
+    }
+
+    .project-card video,
+    .project-card img {
+        height: 160px;
+    }
+
+    .project-overlay h3 {
+        font-size: 14px;
+    }
+
+    .project-overlay p {
+        font-size: 11px;
+    }
+}
+
+/* Ultra Small Devices */
+@media (max-width: 320px) {
+    .filter-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .projects-grid {
+        padding: 10px;
+    }
+
+    .project-card {
+        height: 150px;
+    }
+}

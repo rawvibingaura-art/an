@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Checkmark */
+.checkmark {
+  font-size: 60px;
+  color: #00ff99;
+  margin-bottom: 20px;
+  animation: pop 0.5s ease;
+}
+
+/* Text */
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  background: #ff4c60;
+  color: white;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ff2e4d;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes pop {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* ─────────────────────────────────────────────
+   THANK YOU PAGE – RESPONSIVE FIX
+──────────────────────────────────────────── */
+
+/* Tablets */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .checkmark {
+    font-size: 50px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  .checkmark {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    display: inline-block;
+  }
+}
+
+/* Ultra Small Devices */
+@media (max-width: 320px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .checkmark {
+    font-size: 36px;
+  }
+}

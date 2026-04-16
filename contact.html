@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CONTACT | AYUSH NANDI</title>
+	<link rel="icon" type="image/png" href="image.png"> 
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-ant-path/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <section class="hero contact-hero">
+        <nav class="navbar reveal">
+            <div class="logo">
+                <img src="ayush_nandi_logo_glow.png" alt="logo">
+            </div>
+            <ul class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="project.html">Projects</a>
+                <a href="contact.html">Contact</a>
+				<a href="skills.html">Skills</a>
+                <li><button class="btn get-touch-btn">Get in touch</button></li>
+            </ul>
+        </nav>
+
+       <div class="hero-row">
+    <!-- LEFT TEXT -->
+    <div class="contact-hero-content reveal delay-1">
+        <p class="small-title">Let’s build something real</p>
+        <h1>
+            <span class="gradient-text">YOUR STORY</span><br>
+            <span class="outline-text">STARTS HERE</span>
+        </h1>
+        <p class="hero-sub">
+          Every idea has a story waiting to be told.
+Let’s bring yours to life.
+        </p>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="hero-image reveal delay-3">
+        <img src="image.png" alt="AYUSH NANDI-logo">
+    </div>
+
+</div>
+    </section>
+</header>
+
+<main>
+<section class="contact-section">
+
+    <!-- 🔥 MESSAGE -->
+    <p id="location-msg" class="location-msg">
+        📍 Allow location for a better experience
+    </p>
+<section class="contact-section">
+
+    <!-- 🔥 MESSAGE -->
+    <p id="location-msg" class="location-msg">
+        📍 Allow location for a better experience
+    </p>
+	<!-- Map Typing -->
+<div class="map-heading">
+    <h2>
+        <span class="map-typing"></span>
+        <span class="cursor">|</span>
+    </h2>
+</div>
+    <!-- MAP -->
+    <div id="map"></div>
+   
+
+        <!-- LEFT: Info Cards -->
+        <div class="contact-info-side reveal delay-1">
+
+            <div class="info-card">
+                <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div>
+                    <h4>WhatsApp</h4>
+                    <p>+91 9563316500</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                    <h4>Address</h4>
+                    <p>Alipurduar Court, Alipurduar,<br>West Bengal, India – 736123</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                    <h4>Email</h4>
+                    <p>ayushnandi718@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-row">
+                <a href="https://instagram.com/rva.creates/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@rva.creates" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.linkedin.com/in/ayush-nandi-apdj-india/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ayushnandi718-dev" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/1rva.creates/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+
+<!-- RIGHT: Contact Form -->
+<div class="contact-form-side reveal delay-2">
+
+    <form class="contact-form" 
+          action="https://formsubmit.co/ayushnandi718@gmail.com" 
+          method="POST">
+
+        <!-- Hidden settings -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New Portfolio Message!">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="thankyou.html">
+		<input type="hidden" name="_next" value="https://ayushapd.dpdns.org/thankyou.html">
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="name" placeholder="Ayush Nandi" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="you@example.com" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Subject</label>
+            <input type="text" name="subject" placeholder="Video Editing Project">
+        </div>
+
+        <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+        </div>
+
+        <!-- ✅ Button should be directly inside form -->
+        <button type="submit" class="btn submit-btn">
+            Send Message &nbsp;<i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+    </form>
+
+</div>
+
+</div>
+
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-left">
+            <h3>AYUSH NANDI</h3>
+            <p>Video Editor & Digital Creator</p>
+            <div class="contact-info">
+                <p><span>📱</span><strong>WhatsApp:</strong> +91 9563316500</p>
+                <p><span>📍</span><strong>Address:</strong> Alipurduar Court, Alipurduar, West Bengal, India, 736123</p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Projects</a>
+            <a href="contact.html">Contact</a>
+			<a href="skills.html">Skills</a>
+        </div>
+
+        <div class="footer-social">
+            <a target="_blank" rel="noopener noreferrer" href="https://instagram.com/rva.creates/"><i class="fa-brands fa-instagram"></i></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@rva.creates"><i class="fa-brands fa-youtube"></i></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ayush-nandi-apdj-india/"><i class="fa-brands fa-linkedin"></i></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/ayushnandi718-dev"><i class="fa-brands fa-github"></i></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/1rva.creates/"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+
+        <div class="footer-brands">
+            <div><h2>TOOLS THAT I USE</h2></div>
+            <div class="brand"><img src="capcut.png" alt="CapCut"><p>CAPCUT</p></div>
+            <div class="brand"><img src="alightmotion.png" alt="Alight Motion"><p>ALIGHT MOTION</p></div>
+            <div class="brand"><img src="lightroom.png" alt="Lightroom"><p>LIGHTROOM</p></div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 AYUSH NANDI | All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    // Simple form handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('formSuccess').classList.add('show');
+        this.reset();
+        setTimeout(() => {
+            document.getElementById('formSuccess').classList.remove('show');
+        }, 4000);
+    });
+</script>
+<script> window.chtlConfig = { chatbotId: "8831923776" } </script>
+<script async data-id="8831923776" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+</body>
+</html>
